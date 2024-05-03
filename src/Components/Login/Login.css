@@ -51,7 +51,7 @@
     margin-right: 5px;
 }
 .recall-forget a, .signup-link p a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 .recall-forget a:hover, .signup-link p a:hover {
@@ -76,5 +76,5 @@
     margin: 20px 0 10px;
 }
 .signup-link p a {
-    color: #fff;
+    color: #2e72e7;
 }
