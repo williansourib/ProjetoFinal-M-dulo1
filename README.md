@@ -26,11 +26,10 @@ FitMap é uma aplicação web que permite aos usuários encontrar locais de exer
 - Melhorar a experiência do usuário no mapa, adicionando mais recursos de interatividade, como rotação de mapa, zoom suave, etc.
 - Adicionar testes automatizados para garantir a estabilidade e a qualidade do código.
 
-## Capturas de Tela
-(Inserir capturas de tela aqui, se disponíveis)
+
 
 ## Autor
-[Seu Nome]
+Willian Ribeiro
 
 ## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
