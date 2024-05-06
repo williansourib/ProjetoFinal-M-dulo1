@@ -1,0 +1,26 @@
+/* CadastroLocal.css */
+
+/* Estilizando o formulário */
+form {
+  margin-top: 20px;
+}
+
+/* Estilizando os campos de texto */
+.MuiTextField-root {
+  margin-bottom: 15px;
+}
+
+/* Estilizando o botão de cadastrar */
+.MuiButton-root {
+  margin-top: 20px;
+}
+
+/* Estilizando a mensagem de erro */
+.MuiTypography-colorError {
+  margin-top: 10px;
+}
+
+/* Estilizando o container */
+.MuiContainer-root {
+  padding: 20px;
+}

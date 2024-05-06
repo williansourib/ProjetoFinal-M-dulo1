@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
-import { Typography, Container, Card, CardContent, Grid } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Container, Typography, Grid, Card, CardContent } from '@mui/material';
+import './ListaLocal.css';
 
-function ListaLocal() {
-  // Estado para armazenar os locais cadastrados
+const ListaLocal = () => {
   const [locais, setLocais] = useState([]);
 
-  // Função para adicionar um novo local à lista
-  const adicionarLocal = (novoLocal) => {
-    setLocais([...locais, novoLocal]);
-  };
+  useEffect(() => {
+    const fetchLocais = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/locais');
+        if (!response.ok) {
+          throw new Error('Falha ao carregar os dados');
+        }
+        const data = await response.json();
+        setLocais(data);
+      } catch (error) {
+        console.error('Erro ao carregar os dados:', error);
+      }
+    };
+
+    fetchLocais();
+  }, []);
 
   return (
     <Container maxWidth="md">
@@ -16,16 +28,14 @@ function ListaLocal() {
         Lista de Locais de Exercício
       </Typography>
       <Grid container spacing={3}>
-        {/* Mapear os locais cadastrados para renderizar os cards */}
         {locais.map((local, index) => (
           <Grid item xs={12} sm={4} key={index}>
-            <Card>
-              <CardContent>
-                <Typography variant="h5">{local.nomeLocal}</Typography>
-                <Typography variant="body1">Usuário: {local.usuario}</Typography>
-                <Typography variant="body1">Endereço: {local.endereco}</Typography>
-                <Typography variant="body1">Tipo de Prática: {local.tipoPratica}</Typography>
-                {/* Adicionar mais informações aqui, se necessário */}
+            <Card className="card">
+              <CardContent className="card-content">
+                <Typography variant="h5" className="card-title">{local.nomeLocal}</Typography>
+                <Typography variant="body1" className="card-info">Usuário: {local.usuario}</Typography>
+                <Typography variant="body1" className="card-info">Endereço: {local.endereco}</Typography>
+                <Typography variant="body1" className="card-info">Tipo de Prática: {local.tipoPratica}</Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -33,6 +43,6 @@ function ListaLocal() {
       </Grid>
     </Container>
   );
-}
+};
 
 export default ListaLocal;

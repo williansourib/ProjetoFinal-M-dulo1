@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": "07b8",
+      "nome": "WILLIAN DE SOUSA RIBEIRO",
+      "sexo": "masculino",
+      "cpf": "82222228915",
+      "dataNascimento": "2024-05-06",
+      "email": "willianribeiro709@gmail.com",
+      "senha": "teste",
+      "endereco": "RUA ENGENHEIRO JOSE GOMES"
+    }
+  ],
+  "locais": [
+    {
+      "id": "1",
+      "nomeLocal": "Academia A",
+      "usuario": "admin",
+      "cep": "12345-678",
+      "endereco": "Rua A, Bairro A, Cidade A - UF",
+      "latitude": "-12.345678",
+      "longitude": "-12.345678",
+      "tipoPratica": "Musculação",
+      "cadastro": {
+        "dataCadastro": "2024-05-06",
+        "usuarioCadastro": "willian"
+      }
+    },
+    {
+      "id": "bfe1",
+      "nomeLocal": "smartfit",
+      "usuario": "willian",
+      "cep": "88101320",
+      "endereco": "Rua Dom Pedro II, Campinas, São José - SC",
+      "latitude": "-27.5920047",
+      "longitude": "-48.60920",
+      "tipoPratica": "Musculação",
+      "cadastro": {
+        "dataCadastro": "2024-05-06",
+        "usuarioCadastro": "willian"
+      }
+    },
+    {
+      "id": "1b97",
+      "nomeLocal": "smartfit",
+      "usuario": "willian@email.com",
+      "cep": "89232060",
+      "endereco": "Rua Engenheiro José Gomes, Petrópolis, Joinville - SC",
+      "latitude": "-27.5920047",
+      "longitude": "-48.60920",
+      "tipoPratica": "Musculação"
+    },
+    {
+      "id": "546a",
+      "nomeLocal": "academia ",
+      "usuario": "willian",
+      "cep": "88090050",
+      "endereco": "Rua Waldemar Ouríques, Capoeiras, Florianópolis - SC",
+      "latitude": "-27.5911045",
+      "longitude": "-48.6287659",
+      "tipoPratica": "Musculação"
+    },
+    {
+      "id": "7593",
+      "nomeLocal": "academia formus",
+      "usuario": "willian",
+      "cep": "88101270",
+      "endereco": "Rua Osni João Vieira, Campinas, São José - SC",
+      "latitude": "-27.5911045",
+      "longitude": "-48.6287659",
+      "tipoPratica": "Musculação"
+    }
+  ],
+  "register": [
+    {
+      "id": "62dc",
+      "nome": "willian ribeiro",
+      "sexo": "Masculino",
+      "cpf": "08026856929",
+      "dataNascimento": "22121993",
+      "email": "willian@email.com",
+      "senha": "12345678",
+      "endereco": "89232060"
+    }
+  ]
+}

@@ -1,30 +1,46 @@
 import React, { useState } from 'react';
 import { Typography, Button, CircularProgress } from '@mui/material';
 import { FaUser, FaLock } from 'react-icons/fa';
-import { Link } from 'react-router-dom'; // Importe o componente Link
+import { Link , useNavigate} from 'react-router-dom'; // Importe o componente Link
 import './Login.css';
+import axios from 'axios';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setLoading(true);
-    // Simulação de login (substituir com lógica de autenticação real)
-    setTimeout(() => {
-      if (username === 'admin' && password === 'admin') {
-        // Login bem-sucedido
+  const handleSubmit = async (event) => {
+  event.preventDefault();
+  setLoading(true);
+
+  try {
+    const response = await axios.get('http://localhost:3001/users', {
+      username,
+      password,
+    });
+    
+    let resultado = response.data
+    resultado.forEach(db => {
+
+      const user = (db.email === username && db.senha === password);
+
+      if (user) {
         alert('Login bem-sucedido!');
+        navigate('/Dashboard');
       } else {
-        // Login inválido
         setError('E-mail ou senha incorretos.');
       }
-      setLoading(false);
-    }, 2000);
-  };
+    });
+
+  } catch (error) {
+    setError('Ocorreu um erro durante o login.');
+  }
+
+  setLoading(false);
+};
 
   return (
     <div className='container'>

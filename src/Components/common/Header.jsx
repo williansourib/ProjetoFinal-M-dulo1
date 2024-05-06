@@ -22,10 +22,10 @@ function Header() {
             <Button component={Link} to="/Dashboard" color="inherit">
               Home
             </Button>
-            <Button component={Link} to="/CadastroLocal" color="inherit">
+            <Button component={Link} to="/cadastro-local" color="inherit">
               Adicionar Exercicio 
             </Button>
-            <Button component={Link} to="/ListaLocal" color="inherit">
+            <Button component={Link} to="/lista-local" color="inherit">
               Locais De Exercicio
             </Button>
             

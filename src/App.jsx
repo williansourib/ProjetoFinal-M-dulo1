@@ -8,17 +8,17 @@ import CadastroLocal from './Components/CadastroLocal/CadastroLocal';
 import ListaLocal from './Components/ListaLocal/ListaLocal';
 import Registro from "./Components/Login/Registro";
 
-
 function App() {
   return (
     <Router>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Login/>} />
-        <Route path="/Dashboard" element={<Dashboard/>} />
-        <Route path="/CadastroLocal" element={<CadastroLocal/>} />
-        <Route path="/ListaLocal" element={<ListaLocal/>} />
-        <Route path="/Registro" element={<Registro />} />
+        <Route exact path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/cadastro-local" element={<CadastroLocal />} />
+        <Route path="/lista-local" element={<ListaLocal />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </Router>
